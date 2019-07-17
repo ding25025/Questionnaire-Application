@@ -47,6 +47,7 @@
 				    text.Solution = document.getElementById("s5").value;
 				var myJSON = JSON.stringify(text);
 				subject = document.getElementById("subject").value;
+				myJSON = stringConvertor(myJSON);
 				if (text.Description != "" && text.A != "" && text.B != "" && text.C != "") {
 				    if (subject == "HTML")
 				        HTTPPostData("Post.aspx?id=questionaireDB_html", myJSON);
@@ -70,6 +71,24 @@
                 alert("若需要使用<符號，請用&lt;取代");
 			}
 			
+			function stringConvertor(str){
+				var result = '';
+				var arg = str;
+				alert(arg);
+				for ( var i = 0; i < str.length; i++ ){
+					if ( str[i] == '<' ) {
+						if ( str[i+1] = 'b' && str[i+2] =='r' && str[i+3] == '>' )
+							result += str[i];
+						else
+							result += '&lt;';
+					}
+					else
+						result += str[i];
+				}
+				alert(result);
+				//document.getElementById("raw").innerHTML = result;
+				return result;
+			}
 			</script>
 	<style>
 		.container {
