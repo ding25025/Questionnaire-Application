@@ -1,0 +1,12 @@
+"下列選項何者最適合填入空格？ <img _?_= ""img_girl.jpg"">",source,picture,src,jpg,pic,C,Attributes
+"width、height屬性提供關於圖片的何種資訊？",resolution,pattern,size,scale,style
+"下列選項何者最適合填入空格？<a _?_=""https://www.w3schools.com"">This is a link</a>",link,href,herf,attach,insert
+"若想要以文字替代無法顯示的圖片，下列何者最適合填入空格？ <br><img arc=""w3schools.png"" _?_=""w3schools Logo"">",cat,let,alt,text,subtitle
+"如何在HTML中新增一個文字段落 ""Hellow World!""？",<paragraph>Hello World!</paragraph>,<p>Hello World!</p>,<p Hello World! />,<paragraph Hello World! />,<p id=”Hello World” />
+"下列何者最適合填入空格？ <h1>This is a heading._?_ ？",,,,,
+"如何在HTML程式碼中產生一段文字註解？",,,,,
+"HTML以哪一個標籤表示重要的文字(important text)？",,,,,
+"HTML以哪一個標籤表示強調的文字(emphasized text)？",,,,,
+"HTML標籤分為開頭與結束兩種，兩者成對出現。請問結束標籤中應包含下列那一個字符？",,,,,
+"HTML中以哪三種標籤何產生表格？",,,,,
+"如何產生一個以數字編排的條列？",,,,,

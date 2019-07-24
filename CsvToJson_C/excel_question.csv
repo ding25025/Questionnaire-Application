@@ -1,0 +1,34 @@
+題目,A選項,B選項,C選項,D選項,E選項,答案,章節
+"下列選項何者最適合填入空格? <img _?_= ""img_girl.jpg"">",source,picture,src,jpg,pic,C,Attributes
+width、height屬性提供關於圖片的何種資訊？,resolution,pattern,size,scale,style,C,Attributes
+"下列選項何者最適合填入空格？ <a _?_=""https://www.w3schools.com"">This is a link</a>",link,href,herf,attach,insert,B,Links
+"若想要以文字替代無法顯示的圖片，下列選項何者最適合填入空格？ <br><img arc=""w3schools.png"" _?_=""w3schools Logo"">",cat,let,alt,text,subtitle,C,Links
+"如何在HTML中新增一個文字段落 ""Hellow World!""？",<paragraph>Hello World!</paragraph>,<p>Hello World!</p>,<p Hello World! />,<paragraph Hello World! />,"<p id=""Hello World"" />",B,Paragraph
+下列選項何者最適合填入空格？ <h1>This is a heading._?_ ？, </p>,</heading>,</h1>,</h>,</>,C,Heading
+如何在HTML程式碼中產生一段文字註解？,<!--This is a comment-->,//This is a comment,/*This is a comment*/,$This is a comment,<comment>This is a comment</comment>,A,Comments
+HTML以哪一個標籤表示重要的文字(important text)？,<b>,<strong>,<i>,<important>,<em>,B,Others
+HTML以哪一個標籤表示強調的文字(emphasized text)？,<em>,<italic>,<i>,<emphasize,<remark>,A,Others
+HTML標籤分為開頭與結束兩種，兩者成對出現。請問結束標籤中應包含下列那一個字符？,/,<,>,$,\\,A,Others
+HTML中以哪三種標籤何產生表格？,<table><tr><td>,<table><tr><tt>,<thead><column><row>,<form><column><row>,<style><heading><p>,A,Tables
+如何產生一個以數字編排的條列？,<ul>,<ol>,<list>,<number>,<dot>,B,Lists
+如何產生一個以符號編排的條列？,<ul>,<ol>,<list>,<number>,<dot>,A,Lists
+下列產生勾選式選單的方法何者正確？,<input type=checkbox>,"<input type=""check"">","<input type=""checkbox"">",<checkbox>,<check>,C,Input
+下列產生文字輸入欄的方法何者正確？,"<input type=""textfield"">","<input type=""text"">",<text>,<word>,<write>,B,Input
+下列產生下拉式選單的方法何者正確？,<dropdown>,<select>,<list>,Drop,"<input type=""dropdown"">",B,Input
+下列產生文字顯示區的方法何者正確？,<textarea>,"<input type=""textarea"">","<input type=""textbox"">","<input type=""text"">",<text>,A,Input
+判斷題目敘述是否正確：<iframe>的功能是將網頁呈現在網頁中？,TRUE,FALSE,沒有 <iframe> 這個東西歐,,,A,Others
+判斷題目敘述是否正確：HTML註解以「<!--」開頭，並以「-->」結束？,TRUE,FALSE,沒辦法註解啦,,,A,Comments
+可使用下列哪一個屬性，將網頁中無法顯示的圖片替換為文字？,<title>,<head>,<meta>,<name>,<header,A,Others
+哪一個HTML屬性可以指定無法顯示的圖片以文字替代？,longdesc,source,alt,src,hyperlink,C,Attributes
+在HTML中「onblur、onfocus」是屬於下列何者分類？,Event attributes,HTML elements,Style attributes,JavaScript function,HTML properties,A,Attributes
+關於HTML<canvas>標籤的功能和者敘述正確？,display database records,draw graphics,create draggable elements,create user interface,scripting,B,Others
+HTML中哪一個屬性用來指定輸入欄不得為空？,compulsory,must,repuired,mandatory,important,C,Input
+"想要產生一個超連結，使文字連結到""default.html""，下列作法何者正確？","<a href=""default.html"">Visit our HTML tutorial.</a>","<link href=""default.html"">Visit our HTML tutorial.</link>","<hyperlink href=""default.html>Visit our HTML tutorial.</hyperlink>","<link src=""default.html"">Visit our HTML tutorial.</link>","<a src=""default.html"">Visit our HTML tutorial.</a>",A,Links
+使用哪一種輸入型可以產生滾動條(slider control)？,slider,search,range,control,adjust,C,Input
+下列哪個標籤可以用長條圖來顯示比例？,<range>,<measure>,<meter>,<control>,<adjust>,C,Input
+如何使用HTML「image屬性」設定一個大小為:寬250像素，高400像素的圖片？,"<img src=""scream.jpg"" width:250 height:400>","<img src=""scream.jpg"" width=""250"" height=""400"">","< img src=""scream.jpg"" ""width""=""250"" ""heght""=""400"">","<img src=""scream.jpg"" ""width"":""250"" ""height"":""400"">","<img src=""scream.jpg"" wide=""250"" tall=""400"">",B,Style
+如何使用 CSS 設定一個大小為:寬250像素，高400像素的圖片？,"<img src=""scream.jpg"" style=""width:250px; height:400px;"">","<img src=""scream.jpg"" style=""width:250;height:400;"">","<img src=""scream.jpg"" style=""wide:250;height:400;"">","<img src=""scream.jpg"" style=""width"":""250"";""heght"":""400"";>","< img src=""scream.jpg"" width=""250"" height=""400"">",A,Style
+誰制定了網頁標準？,The World Wide Web Consortium,Mozilla,Google,Facebook,Twitter,A,Others
+下列哪一個標籤用來產生最大字體的標題(heading)？,<br>,<head>,<h1>,<HEADING>,<HEAD>,C,Heading
+如何在網頁中新增背景顏色？,"<body style=""background-color:yellow;"">",<background>yellow</background>,"<body bg=""yellow"">","<body style=""color:yellow"">",<yellow>Body</yellow>,A,Style
+"想要產生一個超連結，使圖片連結到""default.html""，下列作法何者正確？","<a href=""default.html""><img src=""smiley.gif"" /></a>","<a href=""smiley.gif"" window_open=""default.html"" />","< img=""smiley.gif"" href=""default.html"" />","<img=""smiley.gif"" href=""default. />","<a href=""default""><img src=""smiley.gif"" /></a>",A,Links
