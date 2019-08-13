@@ -1,97 +1,108 @@
 ﻿<html>
-		<head>
-			<title>慢性腎臟病新病患護理檢查表格</title>
-			<meta content="Microsoft FrontPage 5.0" name="GENERATOR">
-			<meta content="FrontPage.Editor.Document" name="ProgId">
-			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-			<script type="text/javascript" src="http://ff.kis.v2.scr.kaspersky-labs.com/2290EA1A-6F4E-3546-999D-3238424B7A0A/main.js" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="http://ff.kis.v2.scr.kaspersky-labs.com/84CD1ABF-2338-9D42-92E5-2DD70F786BB4/abn/main.css"/>
-			<script src="HTTP2019.js"></script>
-            <script>
-            
-                function loadChapter() {
-                    var i;
-                    var str = "";
-                    var option = document.getElementById("subject").value;
-                    h_chapter = ["chapter", "Attributes", "Comments", "Image", "Heading", "Paragraph", "Links", "Tables", "Lists", "Id", "Forms", "Form Elements", "Input", "Style", "Others"]; // 宣告race陣列
-                    j_chapter = ["chapter", "Where To", "Output", "Syntax", "Variables", "Data Types", "Function", "Object", "Strings", "Events", "Arrays", "Condition", "Others", "Method"];
-                    if (option == "HTML") {
-                        for (i = 1; i < h_chapter.length; i++)
-                            str += "<option id=\"" + h_chapter[0] + "\"" + i + "\" name=\"" + h_chapter[0] + "\" value=\"" + h_chapter[i] + "\">" + h_chapter[i] + "</option>";
-                    }
-                    else {
-                        for (i = 1; i < j_chapter.length; i++)
-                            str += "<option id=\"" + j_chapter[0] + "\"" + i + "\" name=\"" + j_chapter[0] + "\" value=\"" + j_chapter[i] + "\">" + j_chapter[i] + "</option>";
-                    }
-                    document.getElementById("chapter").innerHTML = str;
-                }
 
-			function upload() {
-			    var text = { "Description": "", "A": "", "B": "", "C": "", "D": "", "E": "", "Solution": "", "Chapter": "" };
-				text.Description = document.getElementById("input1").value;
-				text.Chapter = document.getElementById("chapter").value;
-				text.A = document.getElementById("answerA").value;
-				text.B = document.getElementById("answerB").value;
-				text.C = document.getElementById("answerC").value;
-				text.D = document.getElementById("answerD").value;
-				text.E = document.getElementById("answerE").value;
+<head>
+    <title>慢性腎臟病新病患護理檢查表格</title>
+    <meta content="Microsoft FrontPage 5.0" name="GENERATOR">
+    <meta content="FrontPage.Editor.Document" name="ProgId">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="http://ff.kis.v2.scr.kaspersky-labs.com/2290EA1A-6F4E-3546-999D-3238424B7A0A/main.js" charset="UTF-8"></script>
+    <link rel="stylesheet" crossorigin="anonymous" href="http://ff.kis.v2.scr.kaspersky-labs.com/84CD1ABF-2338-9D42-92E5-2DD70F786BB4/abn/main.css" />
+    <script src="HTTP2019.js"></script>
+    <script>
+        function loadChapter() {
+            var i;
+            var str = "";
+            var option = document.getElementById("subject").value;
+            h_chapter = ["chapter", "Attributes", "Comments", "Image", "Heading", "Paragraph", "Links", "Tables", "Lists", "Id", "Forms", "Form Elements", "Input", "Style", "Others"]; // 宣告race陣列
+            j_chapter = ["chapter", "Where To", "Output", "Syntax", "Variables", "Data Types", "Function", "Object", "Strings", "Events", "Arrays", "Condition", "Others", "Method"];
+            if (option == "HTML") {
+                for (i = 1; i < h_chapter.length; i++)
+                    str += "<option id=\"" + h_chapter[0] + "\"" + i + "\" name=\"" + h_chapter[0] + "\" value=\"" + h_chapter[i] + "\">" + h_chapter[i] + "</option>";
+            } else {
+                for (i = 1; i < j_chapter.length; i++)
+                    str += "<option id=\"" + j_chapter[0] + "\"" + i + "\" name=\"" + j_chapter[0] + "\" value=\"" + j_chapter[i] + "\">" + j_chapter[i] + "</option>";
+            }
+            document.getElementById("chapter").innerHTML = str;
+        }
 
-				if ( document.getElementById("s1").checked )
-					text.Solution = document.getElementById("s1").value;
-				else if ( document.getElementById("s2").checked )
-					text.Solution = document.getElementById("s2").value;
-				else if ( document.getElementById("s3").checked )
-				    text.Solution = document.getElementById("s3").value;
-				else if (document.getElementById("s4").checked)
-				    text.Solution = document.getElementById("s4").value;
-				else if (document.getElementById("s5").checked)
-				    text.Solution = document.getElementById("s5").value;
-				var myJSON = JSON.stringify(text);
-				subject = document.getElementById("subject").value;
-				myJSON = stringConvertor(myJSON);
-				if (text.Description != "" && text.A != "" && text.B != "" && text.C != "") {
-				    if (subject == "HTML")
-				        HTTPPostData("Post.aspx?id=questionaireDB_html", myJSON);
-				    else
-				        HTTPPostData("Post.aspx?id=questionaireDB_js", myJSON);
-				    refresh();
-				}
-				else
-				    alert("Incomplete entry");
-			} // end function
-            
-			function refresh(){
-				document.getElementById("input1").value = "";
-				document.getElementById("answerA").value = "";
-				document.getElementById("answerB").value = "";
-				document.getElementById("answerC").value = "";
-				document.getElementById("answerD").value = "";
-				document.getElementById("answerE").value = "";
-			}
-			function reminder() {
-                alert("若需要使用<符號，請用&lt;取代");
-			}
-			
-			function stringConvertor(str){
-				var result = '';
-				var arg = str;
-				alert(arg);
-				for ( var i = 0; i < str.length; i++ ){
-					if ( str[i] == '<' ) {
-						if ( str[i+1] = 'b' && str[i+2] =='r' && str[i+3] == '>' )
-							result += str[i];
-						else
-							result += '&lt;';
-					}
-					else
-						result += str[i];
-				}
-				alert(result);
-				//document.getElementById("raw").innerHTML = result;
-				return result;
-			}
-			</script>
-	<style>
-		.container {
+        function upload() {
+            var text = {
+                "Description": "",
+                "A": "",
+                "B": "",
+                "C": "",
+                "D": "",
+                "E": "",
+                "Solution": "",
+                "Chapter": ""
+            };
+            text.Description = document.getElementById("input1").value;
+            text.Chapter = document.getElementById("chapter").value;
+            text.A = document.getElementById("answerA").value;
+            text.B = document.getElementById("answerB").value;
+            text.C = document.getElementById("answerC").value;
+            text.D = document.getElementById("answerD").value;
+            text.E = document.getElementById("answerE").value;
+
+            if (document.getElementById("s1").checked)
+                text.Solution = document.getElementById("s1").value;
+            else if (document.getElementById("s2").checked)
+                text.Solution = document.getElementById("s2").value;
+            else if (document.getElementById("s3").checked)
+                text.Solution = document.getElementById("s3").value;
+            else if (document.getElementById("s4").checked)
+                text.Solution = document.getElementById("s4").value;
+            else if (document.getElementById("s5").checked)
+                text.Solution = document.getElementById("s5").value;
+            var myJSON = JSON.stringify(text);
+            subject = document.getElementById("subject").value;
+            myJSON = stringConvertor(myJSON);
+            if (text.Description != "" && text.A != "" && text.B != "" && text.C != "") {
+                /*
+                if (subject == "HTML")
+                    HTTPPostData("Post.aspx?id=questionaireDB_html", myJSON);
+                else
+                    HTTPPostData("Post.aspx?id=questionaireDB_js", myJSON);
+				*/
+                HTTPPostData("Post.aspx?id=questionnaireDB_combined", myJSON);
+                refresh();
+            } else
+                alert("Incomplete entry");
+        } // end function
+
+        function refresh() {
+            document.getElementById("input1").value = "";
+            document.getElementById("answerA").value = "";
+            document.getElementById("answerB").value = "";
+            document.getElementById("answerC").value = "";
+            document.getElementById("answerD").value = "";
+            document.getElementById("answerE").value = "";
+        }
+
+        function reminder() {
+            alert("若需要使用<符號，請用&lt;取代");
+        }
+
+        function stringConvertor(str) {
+            var result = '';
+            var arg = str;
+            alert(arg);
+            for (var i = 0; i < str.length; i++) {
+                if (str[i] == '<') {
+                    if (str[i + 1] == 'b' && str[i + 2] == 'r' && str[i + 3] == '>')
+                        result += str[i];
+                    else
+                        result += '&lt;';
+                } else
+                    result += str[i];
+            }
+            alert(result);
+            //document.getElementById("raw").innerHTML = result;
+            return result;
+        }
+    </script>
+    <style>
+        .container {
             width: 1366px;
             height: 768px;
             margin: 10px 10px 10px 10px;
@@ -100,78 +111,81 @@
             min-width: 1000px;
             resize: both;
             overflow: auto;
-			border: 1px solid black;
-		}
-	</style>
-	</head>
-	
-	<body onload="loadChapter(), reminder();">
-		
-			<form style="width:50%;">
-			
-				<table  align="center" border="1" cellspacing="10" cellpadding="2" style="width:100%;height:90%;">
-					<tr>
-						<td><h1>題庫上傳</h1></td>
-                        <td align="center">課程: 
-                            <select id="subject">
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body onload="loadChapter(), reminder();">
+
+    <form style="width:50%;">
+
+        <table align="center" border="1" cellspacing="10" cellpadding="2" style="width:100%;height:90%;">
+            <tr>
+                <td>
+                    <h1>題庫上傳</h1>
+                </td>
+                <td align="center">課程:
+                    <select id="subject">
                                 <option name="subjectList" id="subject1" value="HTML">HTML</option>
                                 <option name="subjectList" id="subject2" value="JavaScript">JavaScript</option>
                             </select>
-                        <br />
-                            <button type="button" id="verifySubject" onclick="loadChapter()">顯示章節</button>
-                            <select id="chapter">
+                    <br />
+                    <button type="button" id="verifySubject" onclick="loadChapter()">顯示章節</button>
+                    <select id="chapter">
                             </select>
-                        </td>
-					</tr>
-					<tr>
-						<td colspan="2">題目
-							<input type="text" id="input1" name="question" maxlength="200" size="200"/>
-						</td>
-					</tr>
-					<tr>
-						<td colspan="2"> 選項 A
-							<input type="text" id="answerA" name="answer" maxlength="200" size="200" />
-						</td>
-					</tr>
-					<tr>
-						<td colspan="2"> 選項 B
-							<input type="text" id="answerB" name="answer" maxlength="200" size="200" />
-						</td>
-					</tr>
-					<tr> 
-						<td colspan="2"> 選項 C
-							<input type="text" id="answerC" name="answer" maxlength="200" size="200" />
-						</td>
-					</tr>
-                    <tr>
-                        <td colspan="2">
-                            選項 D
-                            <input type="text" id="answerD" name="answer" maxlength="200" size="200" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            選項 E
-                            <input type="text" id="answerE" name="answer" maxlength="200" size="200" />
-                        </td>
-                    </tr>
-					<tr> 
-						<td colspan="2"> 答案
-							<input type="radio" id="s1" name="solution" Value="A">A
-							<input type="radio" id="s2" name="solution" Value="B">B
-							<input type="radio" id="s3" name="solution" Value="C">C
-                            <input type="radio" id="s4" name="solution" Value="B">D
-                            <input type="radio" id="s5" name="solution" Value="C">E
-						</td>
-					</tr>
-					<tr>
-						<td colspan="2" align="center">
-							<button type="button" id="button0" onclick="upload();">送出</button>
-                            <button type="button" id="button1" onclick="reminder();">提示</button>
-						</td>
-					</tr>
-				</table>
-			</form>
-			
-	</body>
-</html>	
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">題目
+                    <input type="text" id="input1" name="question" maxlength="200" size="200" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"> 選項 A
+                    <input type="text" id="answerA" name="answer" maxlength="200" size="200" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"> 選項 B
+                    <input type="text" id="answerB" name="answer" maxlength="200" size="200" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"> 選項 C
+                    <input type="text" id="answerC" name="answer" maxlength="200" size="200" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    選項 D
+                    <input type="text" id="answerD" name="answer" maxlength="200" size="200" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    選項 E
+                    <input type="text" id="answerE" name="answer" maxlength="200" size="200" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"> 答案
+                    <input type="radio" id="s1" name="solution" Value="A">A
+                    <input type="radio" id="s2" name="solution" Value="B">B
+                    <input type="radio" id="s3" name="solution" Value="C">C
+                    <input type="radio" id="s4" name="solution" Value="B">D
+                    <input type="radio" id="s5" name="solution" Value="C">E
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <button type="button" id="button0" onclick="upload();">送出</button>
+                    <button type="button" id="button1" onclick="reminder();">提示</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+
+</html>

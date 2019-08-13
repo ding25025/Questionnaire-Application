@@ -15,7 +15,7 @@
     </style>
 
 <script src="HTTP2019.js"></script>
-    <script src="answerPost_js.js"></script>
+    <script src="answerPost_html.js"></script>
     <script>
         var myObj;
 
@@ -23,16 +23,13 @@
             alert(myObj.length);
         }
         function getData() {
-            //HTTPGetData("Get.aspx?id=questionaireDB_html");
-            HTTPGetData("Get.aspx?id=questionaireDB_js");
+            HTTPGetData("Get.aspx?id=questionnaireDB_combined");
         }
 
         function showData() {
             myObj = JSON.parse(ret);
-            // var text = { "Description": "", "A": "", "B": "", "C": "","D":"", "E":"", "Solution": "", "Chapter":"" };
             var j = 1;
-            var tableStr = "<tr><th>NO.</th> <th>Description</th>";
-            //for (i = 0; i < 3; i++) {
+            var tableStr = "<tr><th>NO.</th> <th>Description</th><th>Chapter</th>";
             for (i = 0; i < myObj.length; i++) {
                 var trStr = "<tr>";
 
@@ -42,6 +39,10 @@
 
                 trStr = trStr + "<td>";
                 trStr = trStr + myObj[i].Description;
+                trStr = trStr + "</td>";
+
+                trStr = trStr + "<td rowspan='6'>";
+                trStr = trStr + myObj[i].Chapter;
                 trStr = trStr + "</td>";
 
                 trStr += "</tr><tr>";
@@ -92,8 +93,8 @@
     <table>
         <tr>
             <td>
-                <input id="Button2" onclick="showData();" type="button" value="Start Test" />
-                <input id="Button3" onclick="answerResponse();" type="button" value="End Test" />
+                <button id="Button2" onclick="showData();" type="button">Start Test</button>
+                <button id="Button3" onclick="answerResponse();" type="button" value="End Test">End Test</button>
                 <button type="button" id="Button4" onclick="show(myObj);">show</button>
             </td>
         </tr>

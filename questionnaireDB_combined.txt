@@ -1,0 +1,20 @@
+{"Description":"下列選項何者最適合填入空格? &lt;img _?_= \"img_girl.jpg\">","A":"source","B":"picture","C":"src","D":"jpg","E":"pic","Solution":"C","Chapter":"Attributes"}
+{"Description":"下列選項何者最適合填入空格？ &lt;a _?_=\"https://www.w3schools.com\">This is a link&lt;/a>","A":"link","B":"href","C":"url","D":"attach","E":"insert","Solution":"B","Chapter":"Links"}
+{"Description":"如何在HTML中新增一個文字段落 \"Hellow World!\"？","A":"&lt;paragraph>Hello World!&lt;/paragraph>","B":"&lt;p>Hello World!&lt;/p>","C":"&lt;p Hello World! />","D":"&lt;paragraph Hello World! />","E":"&lt;p id=\"Hello World\" />","Solution":"B","Chapter":"Paragraph"}
+{"Description":"HTML中以哪三種標籤何產生表格？","A":"&lt;table>&lt;tr>&lt;td>","B":"&lt;table>&lt;tr>&lt;tt>","C":"&lt;table>&lt;row>&lt;column>","D":"&lt;table>&lt;r>&lt;c>","E":"&lt;tb>&lt;r>&lt;c>","Solution":"A","Chapter":"Tables"}
+{"Description":"下列產生勾選式選單的方法何者正確？","A":"&lt;input name=\"check\">","B":"&lt;input type=\"check\">","C":"&lt;input type=\"checkbox\">","D":"&lt;checkbox>","E":"&lt;check>","Solution":"C","Chapter":"Input"}
+{"Description":"下列產生文字輸入欄的方法何者正確？","A":"&lt;input type=\"textfield\">","B":"&lt;input type=\"text\">","C":"&lt;text>","D":"&lt;word>","E":"&lt;write>","Solution":"B","Chapter":"Input"}
+{"Description":"下列產生下拉式選單的方法何者正確？","A":"&lt;dropdown>","B":"&lt;select>","C":"&lt;list>","D":"&lt;drop>","E":"&lt;input type=\"dropdown\">","Solution":"B","Chapter":"Input"}
+{"Description":"誰制定了網頁標準？","A":"The World Wide Web Consortium","B":"Mozilla","C":"Google","D":"Facebook","E":"Twitter","Solution":"A","Chapter":"Others"}
+{"Description":"下列哪一個標籤用來產生最大字體的標題(heading)？","A":"&lt;br/>","B":"&lt;head>","C":"&lt;h1>","D":"&lt;HEADING>","E":"&lt;HEAD>","Solution":"C","Chapter":"Heading"}
+{"Description":"要將圖片用加上超連接，需要將&lt;img>標記放在下列何者標記內？","A":"&lt;a>&lt;/a>","B":"&lt;p>&lt;/p>","C":"&lt;b>&lt;/b>","D":"&lt;i>&lt;/i>","E":"&lt;u>&lt;/u>","Solution":"A","Chapter":"Links"}
+{"Description":"在HTML中我們使用何種標籤寫入JavaScript?","A":"&lt;script>","B":"&lt;javascript>","C":"&lt;JavaScript>","D":"&lt;JAVASCRIPT> ","E":"&lt;JS> ","Solution":"A","Chapter":"Where To"}
+{"Description":"\"如何以正確的JavaScript語法修改網頁中以下標籤內容:  &lt;p id=\"demo\">This is a demonstration.&lt;/p>?\"","A":"document.getElementsByName(\"demo\").innerHTML = \"Hello World\";","B":"document.getElementById(\"demo\").innerHTML = \"Hello World\";","C":"document.getElementById(\"demo\").innerHtml = \"Hello World\";","D":"document.getElementById(\"demo\").value = \"Hello World.\";","E":"document.getElementsByName(\"demo\").value = \"Hello World.\";","Solution":"B","Chapter":"Syntax"}
+{"Description":"如何在JavaScript中宣告一個陣列?","A":"var color = \"red\", \"green\", \"blue\"","B":"var colors = (1:\"red\", 2:\"green\", 3:\"blue\")","C":"var colors = [\"red\", \"green\", \"blue\"]","D":"array colors = (1:\"red\", 2:\"green\", 3:\"blue\")","E":"array color = \"red\", \"green\", \"blue\"","Solution":"C","Chapter":"Arrays"}
+{"Description":"當點擊網頁上的東西時，會觸發什麼事件?","A":"onclick","B":"onmouseover","C":"onchange","D":"change","E":"click","Solution":"A","Chapter":"Events"}
+{"Description":"如何表示三個變數都相等的條件?","A":"( A == B == C )","B":"( A == B ) && ( B == C )","C":"( A == B ) && ( B = C )","D":"( A = B ) & ( B = C )","E":"A = B = C","Solution":"B","Chapter":"Condition"}
+{"Description":"下列選項何者不是參數可能的型態?","A":"文字(常數)","B":"變數","C":"邏輯運算子，如：＆＆（AND）、｜｜（OR）","D":"數字","E":"字串(變數)","Solution":"C","Chapter":"Function"}
+{"Description":"下列何者不是視窗物件擁有的屬性？","A":"document","B":"curtain","C":"result","D":"navigator","E":"history","Solution":"B","Chapter":"Others"}
+{"Description":"下列呼叫函式的方法何者不正確？","A":"var x = myfunc();","B":"myfunc;","C":"x = myfunc();","D":"myfunc();","E":"以上皆正確","Solution":"B","Chapter":"Function"}
+{"Description":"下列哪一個選項可以使你在瀏覽器上檢查程式？","A":"General","B":"F12","C":"Programs","D":"Advanced","E":"Debug","Solution":"B","Chapter":"Others"}
+{"Description":"\"下方程式： &lt;script type='text/javascript'> A = 8 + \"8\"; document.write(a); &lt;/script> 執行完畢後會輸出什麼結果？\"","A":"16","B":"編譯失敗，無法執行","C":"88","D":"undefined","E":"8 + \"8\"","Solution":"C","Chapter":"Variables"}

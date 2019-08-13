@@ -1,7 +1,0 @@
-{"name":"丁丁","telecom":"0967888","gender":"male","birthDate":"1974-12-25"}
-{"name":"林志玲","telecom":"09888888","gender":"female","birthDate":"1974-12-25"}
-{"name":"aaaa","telecom":"12345678","gender":"male","birthDate":"1974-12-25"}
-{"name":"aaaaaaa","telecom":"12345678","gender":"male","birthDate":"1974-12-25"}
-{"name":"Chalmers","telecom":"12345678","birthDate":"1974-12-25","gender":"male","race":"chinese","registrationID":"123456789","nric":"6060","address":"Taman Krsytal","relativeName":"Boon Hua"}
-{"name":"Chalmers","telecom":"12345678","birthDate":"1974-12-25","gender":"male","race":"chinese","registrationID":"123456789","nric":"6060","address":"Taman Krsytal","relativeName":"Boon Hua"}
-{"name":"123","telecom":"abc","birthDate":"abc","gender":"","race":"default","registrationID":"","nric":"abcdefg","address":"","relativeName":""}
