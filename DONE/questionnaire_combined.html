@@ -1,20 +1,24 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
-  
+
     <style>
-         table {
+        table {
             width: 1000px;
-         }
-        table, th, td {
-            align-content:center;
+        }
+        
+        table,
+        th,
+        td {
+            align-content: center;
             border: 1px solid black;
         }
     </style>
 
-<script src="HTTP2019.js"></script>
+    <script src="HTTP2019.js"></script>
     <script src="answerPost_html.js"></script>
     <script>
         var myObj;
@@ -22,6 +26,7 @@
         function show(myObj) {
             alert(myObj.length);
         }
+
         function getData() {
             HTTPGetData("Get.aspx?id=questionnaireDB_combined");
         }
@@ -51,7 +56,7 @@
                 trStr = trStr + "<td  colspan=\"2\">";
                 trStr = trStr + "<input type=\"radio\" id=\"s" + (j + '1') + "\"name=\"answer" + i + "\" value=\"A\">" + myObj[i].A + "</input>";
                 trStr = trStr + "</td>";
-            
+
                 trStr += "</tr><tr>";
 
                 trStr = trStr + "<td  colspan=\"2\">";
@@ -63,7 +68,7 @@
                 trStr = trStr + "<td  colspan=\"2\">";
                 trStr = trStr + "<input type=\"radio\" id=\"s" + (j + '3') + "\"name=\"answer" + i + "\" value=\"C\">" + myObj[i].C + "</input>";
                 trStr = trStr + "</td>";
-                
+
                 trStr += "</tr><tr>";
 
                 trStr = trStr + "<td  colspan=\"2\">";
@@ -75,7 +80,7 @@
                 trStr = trStr + "<td  colspan=\"2\">";
                 trStr = trStr + "<input type=\"radio\" id=\"s" + (j++ + '5') + "\"name=\"answer" + i + "\" value=\"E\">" + myObj[i].E + "</input>";
                 trStr = trStr + "</td>";
-                
+
                 trStr += "</tr>";
 
                 tableStr = tableStr + trStr;
@@ -106,23 +111,26 @@
 
         function checkTime(i) {
             if (i < 10)
-                i = "0" + i;  // add zero in front of numbers < 10
+                i = "0" + i; // add zero in front of numbers < 10
             return i;
         } // end function
-
     </script>
 
 </head>
+
 <body onload="getData();">
     <table>
         <tr>
             <td>
                 <button id="Button2" onclick="showData();" type="button">Start Test</button>
                 <button id="Button3" onclick="answerResponse();" type="button" value="End Test">End Test</button>
-                <button type="button" id="Button4" onclick="show(myObj);">show</button>
+                <!--
+                    <button type="button" id="Button4" onclick="show(myObj);">show</button>
+                -->
             </td>
         </tr>
     </table>
-    <table id = "t1" />
+    <table id="t1" />
 </body>
+
 </html>
