@@ -1,8 +1,7 @@
-﻿// total 33 question
+﻿var response = { "responder": "", "start": "", "end": "" };
 function answerResponse() {
-    var response = { "responder": "", "start": "", "end":""};
     //response.responder的部分，是否要抓主程式的登陸識別號token或身份id?
-    response.start = period_start(); // 反饋上傳時間
+    
     let status;
     status = false;
     for (var j = 1; j < 6; j++) {
@@ -226,30 +225,6 @@ function answerResponse() {
     }
     response.end = period_start();
     var myJSON = JSON.stringify(response);
-    alert(myJSON);
+    //alert(myJSON);
     HTTPPostData("Post.aspx?id=answerResponse", myJSON);
 }
-
-function period_start() {
-    var today = new Date();
-    var h = today.getHours();
-    var m = today.getMinutes();
-    var s = today.getSeconds();
-    m = checkTime(m);
-    s = checkTime(s);
-    date = today.getDate();
-    month = today.getMonth() + 1;
-    date = checkTime(date);
-    month = checkTime(month);
-    year = today.getFullYear();
-    dateString = year + "-" + month + "-" + date + "T" + h + ":" + m + ":" + s + ".000Z";
-    //document.getElementById('start_time').value = dateString;
-    alert(dateString);
-    return dateString;
-}
-
-function checkTime(i) {
-    if (i < 10)
-        i = "0" + i;  // add zero in front of numbers < 10
-    return i;
-} // end function
